@@ -73,6 +73,7 @@ int main(){
     std::cout<<"\nTipul marului: "<<Mar2.getType()<<"\n";
     std::cout<<"\n";
 
+    
                                     //finally destructors for all objects created
     return 0;
 }
