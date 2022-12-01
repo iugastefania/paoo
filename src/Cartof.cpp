@@ -1,6 +1,6 @@
 #include <iostream>
 #include <Cartof.hpp>
-
+#include <Fruct.hpp>
 
     Cartof::Cartof(int g, double p, int t): 
         Leguma(g,p),
@@ -13,4 +13,5 @@
     {
         std::cout<<"Cartof destructor\n";
     }
+
 
