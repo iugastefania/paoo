@@ -16,6 +16,8 @@ class Mar : public Fruct
 
         Mar& operator=(const Mar &m);
 
+        int getType();
+
 };
 
 #endif
