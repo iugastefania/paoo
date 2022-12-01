@@ -16,15 +16,24 @@
 
    }
 
+                                                    //Item 10 
+                                                    //Item 11 
+                                                    //Item 12
    Fruct&Fruct::operator=(const Fruct &f)
    {
-       std::cout<<"Fruct assignment\n";
-       this->greutate=f.greutate;
-       this->pret=f.pret;
+        if(this==&f)
+        {
+            std::cout<<"Fruct assignment to self\n";
+            return *this;
+        }
+
+        std::cout<<"Fruct assignment\n";
+        this->greutate=f.greutate;
+        this->pret=f.pret;
         return *this;
    }
 
-    Fruct:: ~Fruct()
+    Fruct::~Fruct()
     {
         std::cout<<"Fruct destructor\n";
     }
