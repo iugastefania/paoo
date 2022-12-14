@@ -1,6 +1,6 @@
 #include <iostream>
 #include <Leguma.hpp>
-
+                                                // Item 4 - constructor cu member initialization list
     Leguma::Leguma(int g, double p):
         greutate(g),
         pret(p)
