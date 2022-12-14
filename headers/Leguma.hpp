@@ -14,7 +14,7 @@ class Leguma
 
         virtual ~Leguma();
         
-        private:
+    private:
         Leguma(const Leguma &l);                 //uncopyable
 
         Leguma& operator=(const Leguma &l);      //copy assignment not allowed
