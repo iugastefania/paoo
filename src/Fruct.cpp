@@ -1,9 +1,11 @@
 #include <iostream>
 #include <Fruct.hpp>
-
-    Fruct::Fruct(int g, double p):
+                                                    // Item 4 - constructor cu member initialization list
+                                                    // Item 5 - copy constructor declarat
+    Fruct::Fruct(int g, double p):          
         greutate(g),
-        pret(p)
+        pret(p),
+        rotten(false)
    {
        std::cout<<"Fruct constructor\n";                        
    }  
@@ -16,9 +18,9 @@
 
    }
 
-                                                    //Item 10 
-                                                    //Item 11 
-                                                    //Item 12
+                                                    // Item 10 - assignment operators return a reference to *this
+                                                    // Item 11 - handle assignment to self in operator =
+                                                    // Item 12 - copy all parts of an object
    Fruct&Fruct::operator=(const Fruct &f)
    {
         if(this==&f)
@@ -40,5 +42,22 @@
 
     int Fruct::getgreutate() 
     {
-        return greutate;
+        return this->greutate;
+    }
+
+                                                // Item 14 
+    void Fruct::setIsRotten(bool r)             // functie pentru setarea rotten sau unrotten
+    {
+        this->rotten=r;
+    }
+
+    void Fruct::verifyRotten()                    // functie pentru verificare rotten sau unrotten
+    {
+        if(this->rotten)
+        {
+            std::cout<<"IS ROTTEN"<<std::endl;
+        }
+        else
+            std::cout<<"IS NOT ROTTEN"<<std::endl;
+
     }
