@@ -1,6 +1,7 @@
 #include <iostream>
 #include <Mar.hpp>
-
+                                                    // Item 4 - constructor cu member initialization list
+                                                    // Item 5 - copy constructor declarat
     Mar::Mar(int g, double p, int t): 
         Fruct(g,p),
         type(t)
@@ -20,9 +21,9 @@
         std::cout<<"Mar copy-constructor\n";
     }
 
-                                                    //Item 10 
-                                                    //Item 11
-                                                    //Item 12                                                    
+                                                    // Item 10 - assignment operators return a reference to *this
+                                                    // Item 11 - handle assignment to self in operator =
+                                                    // Item 12 - copy all parts of an object                                                  
     Mar& Mar::operator=(const Mar &m)
     {
         if(this==&m)
